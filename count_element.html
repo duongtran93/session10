@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="disp"></div>
+    <script>
+        let count = 0;
+        let value = parseInt(prompt("Nhập số cần đếm: "));
+        function countElement(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                if (value === arr[i]) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function dispArr(arr) {
+            document.getElementById("disp").innerHTML = "Bảng nguyên thủy: " + arr.join(", ");
+        }
+
+        let nums = [];
+        for (let i = 0; i< 100; i++) {
+            nums[i] = Math.floor(Math.random()*101);
+        }
+
+        let _count = countElement(nums);
+        dispArr(nums);
+        document.write("<br>");
+        document.write("Số lần xuất hiện của phần tử " + value + " là: " + _count);
+    </script>
+</body>
+</html>
