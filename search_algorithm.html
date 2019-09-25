@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let nums = ["0858437363", "0378372649", "0794738951", "0568746901", "0343489642", "0817588307"];
+        let regexp = /^[0][3][0-9]{8}$/;
+
+        function checkNumberViettel() {
+            for (let i = 0; i < nums.length; i++) {
+                if (regexp.test(nums[i])) {
+                    document.write(nums[i] + " là số viettel" + "<br>");
+                } else {
+                    document.write(nums[i] + " không phải là số viettel" + "<br>");
+                }
+            }
+        }
+
+        checkNumberViettel();
+    </script>
+</body>
+</html>
